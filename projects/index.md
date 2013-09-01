@@ -1,7 +1,7 @@
 ---
 title: projects
 image: /img/icliniq.png
-layout: default
+layout: projects
 ---
 <!--
 
