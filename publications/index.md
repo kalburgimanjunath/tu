@@ -1,6 +1,6 @@
 ---
 title: Publication
-layout: theme1
+layout: publications
 ---
 
 # Publication
