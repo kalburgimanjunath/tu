@@ -1,0 +1,26 @@
+---
+layout: projects
+---
+
+{% include header.html %}
+
+  <div class="span3">
+    {% include sidebar.html %}
+  </div>
+  <div class="span9">
+	<ul class="entries">
+	  {% for post in site.posts %}
+	 
+	  <li>
+	    <a href="{{ post.url }}">
+	      <img src="{{ post.image }}" />
+	      <h3>{{ post.title }}</h3>
+	    </a>
+	  </li>
+	 
+	  {% endfor %}
+	</ul>
+  </dvi>
+  
+{% include footer.html %}
+
