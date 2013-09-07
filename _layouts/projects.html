@@ -9,13 +9,15 @@ comments: true
     
   </div>
   <div class="span9">
-  	 <ul class="posts">
+  	
+	<a href="{{page.url}}"><h3>{{page.title}}<span>  {{ page.date | date: "%d %B %Y" }}</span></h3></a>
+	 <ul class="posts">
 	    {% for post in site.posts %}
 	      <li><span><a href="/{{ post.url }}">{{ post.title }}</a></li>
 	    {% endfor %}
 	  </ul>
   
-	<a href="{{page.url}}"><h3>{{page.title}}<span>  {{ page.date | date: "%d %B %Y" }}</span></h3></a>
+  
 	<p class="tweet-link">Tweet: <a href="https://twitter.com/intent/tweet?text={{page.title}}&amp;url=http://kalburgimanjunath.github.io/tu/{{page.url}}&amp;via=manjunathmk" target="_BLANK">{{page.url}}</a></p>
 
 	<div>
