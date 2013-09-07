@@ -2,4 +2,4 @@ name: Manjunath Kalburgi
 markdown: redcarpet
 pygments: true
 port: 4000
-base_url: .
+base_url: http://kalburgimanjunath.github.io/tu
