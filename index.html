@@ -28,6 +28,7 @@ title: Your New Jekyll Site
 		{% endfor %} 
 	{% endfor %} 
 
+<<<<<<< HEAD
 {% for post in site.categories['beginner'] %}
 <div class="tab-content" id="{{ categories}}">
 	<a href="{{ page.url }}">{{ post.title }}</a>
@@ -39,21 +40,6 @@ title: Your New Jekyll Site
 </div>
 {% endfor %}
 -->	
-<div class="tab-content">
-	{% for post in site.categories['beginner'] %}
-	  <div class="tab-pane">
-		<a href="{{ page.url }}">{{ post.title }}</a>
-	  </div>
-	{% endfor %} 
-	{% for post in site.categories['lessons'] %}
-	  <div class="tab-pane">
-		<a href="{{ page.url }}">{{ post.title }}</a>
-	  </div>
-	{% endfor %} 
-	
-</div>
-
-
 <div class="tab-content">
   <div class="tab-pane active" id="beginner">
 	{% for post in site.categories['beginner'] %}
@@ -70,5 +56,3 @@ title: Your New Jekyll Site
 	{% endfor %} 
   </div>
 </div>
-
-

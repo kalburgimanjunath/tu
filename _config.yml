@@ -1,6 +1,6 @@
 name: Manjunath Kalburgi
 markdown: redcarpet
 pygments: true
-port: 7000
 base_url: .
 excerpt_separator: ""
+base_url: http://kalburgimanjunath.github.io/tu
