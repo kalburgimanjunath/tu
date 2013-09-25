@@ -17,17 +17,58 @@ title: Your New Jekyll Site
 <li><a data-toggle="tab" href="#{{ categories}}">{{ categories}}</a></li>
 {% endfor %} 
 </ul> 
+<!--
+	{% for category in site.categories %}
+		{% for post in category %}
+		<div class="tab-content">
+		
+		<a href="{{ page.url }}">{{ post.title }}</a>
+		
+		</div>
+		{% endfor %} 
+	{% endfor %} 
 
-	<div class="tab-content">
-	{% for categories in site.categories %}
-	  <div class="tab-pane" id="{{ categories}}">
-	  
-		{% for pc in page.categories %}
-{% if pc == categories %}
-<li><a href="{{ page.url }}">{{ page.title }}</a></li>
-{% endif %}   <!-- cat-match-p -->
-{% endfor %}  <!-- page-category -->
-	  
+{% for post in site.categories['beginner'] %}
+<div class="tab-content" id="{{ categories}}">
+	<a href="{{ page.url }}">{{ post.title }}</a>
+</div>
+{% endfor %}
+{% for post in site.categories['lessons'] %}
+<div class="tab-content" id="{{ categories}}">
+	<a href="{{ page.url }}">{{ post.title }}</a>
+</div>
+{% endfor %}
+-->	
+<div class="tab-content">
+	{% for post in site.categories['beginner'] %}
+	  <div class="tab-pane">
+		<a href="{{ page.url }}">{{ post.title }}</a>
 	  </div>
 	{% endfor %} 
-	</div>
+	{% for post in site.categories['lessons'] %}
+	  <div class="tab-pane">
+		<a href="{{ page.url }}">{{ post.title }}</a>
+	  </div>
+	{% endfor %} 
+	
+</div>
+
+
+<div class="tab-content">
+  <div class="tab-pane active" id="beginner">
+	{% for post in site.categories['beginner'] %}
+	  <div class="tab-pane">
+		<a href="{{ post.url }}">{{ post.title }}</a>
+	  </div>
+	{% endfor %} 
+  </div>
+  <div class="tab-pane active" id="lessons">
+	{% for post in site.categories['lessons'] %}
+	  <div class="tab-pane">
+		<a href="{{ post.url }}">{{ post.title }}</a>
+	  </div>
+	{% endfor %} 
+  </div>
+</div>
+
+

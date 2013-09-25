@@ -1,5 +1,6 @@
 name: Manjunath Kalburgi
 markdown: redcarpet
 pygments: true
-port: 4000
+port: 7000
 base_url: .
+excerpt_separator: ""
