@@ -3,4 +3,4 @@ markdown: redcarpet
 pygments: true
 base_url: .
 excerpt_separator: ""
-base_url: http://kalburgimanjunath.github.io/tu
+port: 5000

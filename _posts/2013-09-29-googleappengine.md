@@ -1,7 +1,7 @@
 ---
 title: Google App Engine
-layout: publications
+
+layout: projects
 categories : [lessons]
 ---
 
-## Drive configuration to run PHP applications in google app engine
