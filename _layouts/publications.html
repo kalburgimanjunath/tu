@@ -5,11 +5,19 @@ layout: publications
 {% include header.html %}
 
   <div class="span3">
-    
+    <h4>Projects</h4>
+		<ul class="nav nav-tabs nav-stacked">
+		  {% for tag in post.tags %}
+			<li><a href="{{ post.url }}">{{tags}}</a></li>
+		  {% endfor %}
+		</ul>
   </div>
   <div class="span9">
 		<section>
-			<a href="{{page.url}}"><h1 class="page-header">{{page.title}}<span>  {{ page.date | date: "%d %B %Y" }}</span></h1></a>
+			<h2 class="page-header">
+			<a href="{{page.url}}">{{page.title}}<span>  {{ page.date | date: "%d %B %Y" }}</span></a>
+			</h2>
+			
 		</section>
 		<div>
 		{{ content }}
@@ -41,6 +49,7 @@ layout: publications
 	</ul>
 	-->
 		<ul class="nav nav-tabs">
+				   
 			<li><a data-toggle="tab" href="#beginner" >HTML5</a></li>
 			<li><a data-toggle="tab" href="#lessons" >Javascript</a></li>
 
@@ -56,8 +65,8 @@ layout: publications
 				   </div>
 			   {% endif %}
 			   {% if tag == 'end'%}
-				   <div class="tab-pane " id="lessons">
-						{% include post.html %}
+				   <div class="tab-pane" id="lessons">
+						
 				   </div>
 			   {% endif %}		   
 		   {% endfor %}	 
