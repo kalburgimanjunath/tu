@@ -1,7 +1,7 @@
 ---
 title: Google App Engine
-
-layout: projects
+layout: publications
 categories : [lessons]
 ---
+
 
