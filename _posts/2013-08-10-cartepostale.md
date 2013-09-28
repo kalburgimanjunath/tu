@@ -1,6 +1,6 @@
 ---
-title: news1
-image: ../images/cartepostale.png
+title: cartepostale
+image: ../images/carte.png
 layout: projects
 categories : [projects]
 tags : 

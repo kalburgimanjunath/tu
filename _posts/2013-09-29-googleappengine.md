@@ -1,7 +1,10 @@
 ---
 title: Google App Engine
 layout: publications
-categories : [lessons]
+categories : [news]
+tags : 
+- end
+- beginner
 ---
 
 ### Header 3
