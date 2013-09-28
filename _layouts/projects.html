@@ -16,15 +16,13 @@ comments: true
   </div>
   <div class="span9">	 
 	<section>
-	<a href="{{page.url}}"><h1 class="page-header">{{page.title}}<span>  {{ page.date | date: "%d %B %Y" }}</span></h1></a>
+	<a href="{{page.url}}"><h1 class="page-header">{{page.title}}<span>  {{ page.date | date: "%d %B %Y" }}</span></h2></a>
 	</section>
 	<p class="tweet-link">Tweet: <i class="icon-twitter"></i><a href="https://twitter.com/intent/tweet?text={{page.title}}&amp;url=http://kalburgimanjunath.github.io/tu/{{page.url}}&amp;via=manjunathmk" target="_BLANK">{{page.url}}</a></p>
 
 	<div>
 	{{ content }}
-	{% if page.image =='' %)
 	<img src="/{{ page.image }}" />
-	{% endif %}
 	</div>
 	
 	
