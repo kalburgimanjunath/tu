@@ -6,71 +6,25 @@ comments: true
 {% include header.html %}
 
 
-  <div class="span3">
-    <div id="post-pagination" class="pagination">
-  {% if paginator.previous_page %}
-    <p class="previous">
-      {% if paginator.previous_page == 1 %}
-        <a href="/">Previous</a>
-      {% else %}
-        <a href="{{ paginator.previous_page_path }}">Previous</a>
-      {% endif %}
-    </p>
-  {% else %}
-    <p class="previous disabled">
-      <span>Previous</span>
-    </p>
-  {% endif %}
-
-  <ul class="pages">
-    <li class="page">
-      {% if paginator.page == 1 %}
-        <span class="current-page">1</span>
-      {% else %}
-        <a href="/">1</a>
-      {% endif %}
-    </li>
-
-    {% for count in (2..paginator.total_pages) %}
-      <li class="page">
-        {% if count == paginator.page %}
-          <span class="current-page">{{ count }}</span>
-        {% else %}
-          <a href="/page{{ count }}">{{ count }}</a>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
-
-  {% if paginator.next_page %}
-    <p class="next">
-      <a href="{{ paginator.next_page_path }}">Next</a>
-    </p>
-  {% else %}
-    <p class="next disabled">
-      <span>Next</span>
-    </p>
-  {% endif %}
-
-</div>
+  <div class="span3">	
+		<h4>Projects</h4>
+		<ul class="nav nav-tabs nav-stacked">
+		  {% for post in site.categories['projects'] %}
+			<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+		  {% endfor %}
+		</ul>
   </div>
-  <div class="span9">
-	
-	  
-	<a href="{{page.url}}/tu"><h3>{{page.title}}<span>  {{ page.date | date: "%d %B %Y" }}</span></h3></a>
-	 <ul class="posts">
-	    {% for post in site.posts %}
-	      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="/tu{{ post.url }}">{{ post.title }}</a></li>
-	      <p>{{ post.excerpt }}</p>
-	    {% endfor %}
-	  </ul>
-	  
-
-	<p class="tweet-link">Tweet: <a href="https://twitter.com/intent/tweet?text={{page.title}}&amp;url=http://kalburgimanjunath.github.io/tu/{{page.url}}&amp;via=manjunathmk" target="_BLANK">{{page.url}}</a></p>
+  <div class="span9">	 
+	<section>
+	<a href="{{page.url}}"><h1 class="page-header">{{page.title}}<span>  {{ page.date | date: "%d %B %Y" }}</span></h1></a>
+	</section>
+	<p class="tweet-link">Tweet: <i class="icon-twitter"></i><a href="https://twitter.com/intent/tweet?text={{page.title}}&amp;url=http://kalburgimanjunath.github.io/tu/{{page.url}}&amp;via=manjunathmk" target="_BLANK">{{page.url}}</a></p>
 
 	<div>
 	{{ content }}
+	{% if page.image ==' ' %)
 	<img src="/{{ page.image }}" />
+	{% endif %}
 	</div>
 	
 	

@@ -4,12 +4,49 @@ title: Your New Jekyll Site
 ---
 
 <div id="home">
-  
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
+	<article>
+	
+		<div class="well well-large well-transparent lead">
+		<i class="icon-spinner icon-spin icon-large"></i> Hey there. I'm Manjunath. I'm friendly and I make stuff.
+		</div>
+
+		<p class="well well-transparent">
+		I'm an Indian web developer. That means I run a small web-based business that makes the world better.
+		My main project is credmine.tk, the simplest profiling tool on earth.
+		I'm super-close to launching a from-the-ground-up rewrite of it. Can't wait to show it to you.
+I live in Bangalore & Hubli with my parents and three sisters, in a house we built. I love meeting up with People From the Internet, so if that sounds like you, let's hang out sometime.
+		</p>
 		
-	  </li>
-    {% endfor %}
-  </ul>
+	</article>
+	<p class="well well-transparent">
+	I post quotes, articles, and links on attention management over at <a href="/publications">The Attention Management Blog</a>.
+I post neat things I find online to <a href="http://manjunathmstore.wordpress.com/" target="_blank">my store</a>.
+I'm on Twitter. Frankly, when people say "you should follow me on <i class="icon-twitter"></i>Twitter", it pisses me off. So I'm not going to tell you what to do. If you want to see my account, though, it's at <a href="http://twitter.com/manjumk">@manjumk</a>.
+	</p>
+	
+    <h4>Blog Posts</h4>
+	
+    <div class="row">
+		  {% for post in site.categories['news'] %}
+			<div class="span4">
+				<div class="well well-transparent stacked">
+				<span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
+				</div>
+		    </div>
+			
+		  {% endfor %}
+	</div>
+	<p class="well well-transparent">
+	Apart from credmine, I work on a number of distractions that both improve and interfere with my work. You can see them over at the <a href="/projects">projects page</a>.
+	</p>
+	<h4>Prominent Open Source Projects</h4>
+	<div class="row">
+		  {% for post in site.categories['projects'] %}
+			<div class="span4">
+				<div class="well well-transparent stacked">
+					<span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
+				</div>
+			</div>
+		  {% endfor %}
+	</div>
 </div>
