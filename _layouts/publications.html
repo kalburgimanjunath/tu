@@ -8,7 +8,7 @@ layout: publications
     
   </div>
   <div class="span9">
-  <a href="{{page.url}}/tu"><h3>{{page.title}}<span>  {{ page.date | date: "%d %B %Y" }}</span></h3></a>
+  <a href="{{page.url}}"><h3>{{page.title}}<span>  {{ page.date | date: "%d %B %Y" }}</span></h3></a>
 	<div>
 	{{ content }}
 	</div>
@@ -40,7 +40,8 @@ layout: publications
 	-->
 	<ul class="nav nav-tabs">
 	{% for categories in site.categories %}
-	<li><a data-toggle="tab" href="#{{categories}}" >{{categories}}</a></li>
+	<li><a data-toggle="tab" href="#beginner" >beginner</a></li>
+	<li><a data-toggle="tab" href="#lessons" >lessons</a></li>
 	{% endfor %} 
 	</ul> 
 
@@ -48,14 +49,14 @@ layout: publications
 	  <div class="tab-pane active" id="beginner">
 		{% for post in site.categories['beginner'] %}
 		  <div class="tab-pane">
-			<a href="tu/{{post.url}}">{{ post.title }}</a>
+			<a href="{{post.url}}">{{ post.title }}</a>
 		  </div>
 		{% endfor %} 
 	  </div>
 	  <div class="tab-pane active" id="lessons">
 		{% for post in site.categories['lessons'] %}
 		  <div class="tab-pane">
-			<a href="tu/{{ post.url }}">{{ post.title }}</a>
+			<a href="{{ post.url }}">{{ post.title }}</a>
 		  </div>
 		{% endfor %} 
 	  </div>
