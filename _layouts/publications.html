@@ -4,29 +4,28 @@ layout: publications
 
 {% include header.html %}
 
-{% include header.html %}
-
   <div class="span3">
     
   </div>
   <div class="span9">
+  <a href="{{page.url}}/tu"><h3>{{page.title}}<span>  {{ page.date | date: "%d %B %Y" }}</span></h3></a>
+	<div>
+	{{ content }}
+	</div>
 	
+	<!--
 	  
-	<a href="{{page.url}}/tu"><h3>{{page.title}}<span>  {{ page.date | date: "%d %B %Y" }}</span></h3></a>
 	 <ul class="posts">
 	    {% for post in site.posts %}
 	      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="/tu{{ post.url }}">{{ post.title }}</a></li>
 	      <p>{{ post.excerpt }}</p>
 	    {% endfor %}
 	  </ul>
+	
 	  
 
 	<p class="tweet-link">Tweet: <a href="https://twitter.com/intent/tweet?text={{page.title}}&amp;url=http://kalburgimanjunath.github.io/tu/{{page.url}}&amp;via=manjunathmk" target="_BLANK">{{page.url}}</a></p>
 
-	<div>
-	{{ content }}
-	<img src="/{{ page.image }}" />
-	</div>
 	
 	
 	
@@ -38,6 +37,29 @@ layout: publications
 		<li class="pagination newer"><a href="{{page.newer.url}}">Next</a></li>
 		{% endif %}
 	</ul>
+	-->
+	<ul class="nav nav-tabs">
+	{% for categories in site.categories %}
+	<li><a data-toggle="tab" href="#{{categories}}" >{{categories}}</a></li>
+	{% endfor %} 
+	</ul> 
+
+	<div class="tab-content">
+	  <div class="tab-pane active" id="beginner">
+		{% for post in site.categories['beginner'] %}
+		  <div class="tab-pane">
+			<a href="tu/{{post.url}}">{{ post.title }}</a>
+		  </div>
+		{% endfor %} 
+	  </div>
+	  <div class="tab-pane active" id="lessons">
+		{% for post in site.categories['lessons'] %}
+		  <div class="tab-pane">
+			<a href="tu/{{ post.url }}">{{ post.title }}</a>
+		  </div>
+		{% endfor %} 
+	  </div>
+	</div>
 
 	{% if page.comments %}
 	    <div id="disqus_thread"></div>
