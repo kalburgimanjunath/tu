@@ -14,7 +14,7 @@ comments: true
 	<a href="{{page.url}}/tu"><h3>{{page.title}}<span>  {{ page.date | date: "%d %B %Y" }}</span></h3></a>
 	 <ul class="posts">
 	    {% for post in site.posts %}
-	      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="/tu/{{ post.url }}">{{ post.title }}</a></li>
+	      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="/tu{{ post.url }}">{{ post.title }}</a></li>
 	      <p>{{ post.excerpt }}</p>
 	    {% endfor %}
 	  </ul>
