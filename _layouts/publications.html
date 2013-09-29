@@ -44,7 +44,7 @@ layout: publications
 	</ul>
 	-->
 		<ul class="nav nav-tabs">
-				   
+			<li><a data-toggle="tab" href="#all" >ALL</a></li>
 			<li><a data-toggle="tab" href="#beginner" >HTML5</a></li>
 			<li><a data-toggle="tab" href="#lessons" >Javascript</a></li>
 
@@ -55,17 +55,40 @@ layout: publications
 		
 		   {% for tag in post.tags %}
 			   {% if tag == 'beginner'%}
-				   <div class="tab-pane active" id="beginner">
+				   <div class="tab-pane" id="beginner">
 						<span>{{ post.date | date_to_string }}</span> &raquo; {{ post.title }}
 				   </div>
 			   {% endif %}
-			   {% if tag == 'end'%}
-				   <div class="tab-pane" id="lessons">
-						
+			   
+			   <!--
+			   {% if tag != 'beginner' & tag != 'end' %}
+				   <div class="tab-pane" id="all">
+						<span>{{ post.date | date_to_string }}</span> &raquo; {{ post.title }}
 				   </div>
-			   {% endif %}		   
+			    {% endif %}	-->
 		   {% endfor %}	 
 	{% endfor %} 
+	
+	{% for post in site.categories['news'] %}
+		
+		   {% for tag in post.tags %}
+			  {% if tag == 'end'%}
+				   <div class="tab-pane" id="lessons">
+						<span>{{ post.date | date_to_string }}</span> &raquo; {{ post.title }}
+				   </div>
+			   {% endif %}
+			   
+			   <!--
+			   {% if tag != 'beginner' & tag != 'end' %}
+				   <div class="tab-pane" id="all">
+						<span>{{ post.date | date_to_string }}</span> &raquo; {{ post.title }}
+				   </div>
+			    {% endif %}	-->
+		   {% endfor %}	 
+	{% endfor %} 
+	
+					
+	
 	</div>
    
 
