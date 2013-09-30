@@ -2,7 +2,14 @@
 published: false
 ---
 
-## A New Post
+---
+title: Basics of html4 getting started
+layout: publications
+categories : [news]
+tags: 
+  - jekyll
+  - beginner
+---
 
 Learning Jekyll By Example: Build a Jekyll Website, Start to Finish
 
