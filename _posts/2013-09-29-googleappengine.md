@@ -1,16 +1,12 @@
 ---
-title: Google App Engine
+title: Getting started with HTML4
 layout: publications
 categories : [news]
 tags : 
-- end
+- html4
 - beginner
 ---
 
-### Header 3
+### Getting Started HTML4
+####This HTML tutorial contains hundreds of HTML examples.
 
-> This is a blockquote.
-> 
-> This is the second paragraph in the blockquote.
->
-> ## This is an H2 in a blockquote

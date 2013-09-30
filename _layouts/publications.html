@@ -16,7 +16,18 @@ layout: publications
 		</section>
 		<div>
 		{{ content }}
+			<div class="row">
+				  {% for post in site.categories['news'] %}
+					<div class="span4">
+						<div class="well well-transparent stacked">
+						<span>{{ post.date | date_to_string }}</span> &raquo; <a href="/tu{{ post.url }}">{{ post.title }}</a>
+						</div>
+					</div>
+					
+				  {% endfor %}
+			</div>
 		</div>
+		
 	
 	<!--
 	  
@@ -43,6 +54,7 @@ layout: publications
 		{% endif %}
 	</ul>
 	-->
+	<!--
 		<ul class="nav nav-tabs">
 			<li><a data-toggle="tab" href="#all" >ALL</a></li>
 			<li><a data-toggle="tab" href="#beginner" >HTML5</a></li>
@@ -65,7 +77,7 @@ layout: publications
 				   <div class="tab-pane" id="all">
 						<span>{{ post.date | date_to_string }}</span> &raquo; {{ post.title }}
 				   </div>
-			    {% endif %}	-->
+			    {% endif %}>
 		   {% endfor %}	 
 	{% endfor %} 
 	
@@ -78,18 +90,19 @@ layout: publications
 				   </div>
 			   {% endif %}
 			   
-			   <!--
+			 
 			   {% if tag != 'beginner' & tag != 'end' %}
 				   <div class="tab-pane" id="all">
 						<span>{{ post.date | date_to_string }}</span> &raquo; {{ post.title }}
 				   </div>
-			    {% endif %}	-->
+			    {% endif %}	
 		   {% endfor %}	 
 	{% endfor %} 
 	
 					
 	
 	</div>
+   -->
    
 
 	{% if page.comments %}
