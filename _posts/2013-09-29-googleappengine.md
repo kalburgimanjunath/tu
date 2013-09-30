@@ -1,16 +1,12 @@
 ---
-title: Google App Engine
+title: Basics of html4 getting started
 layout: publications
-categories : [news]
-tags : 
-- end
-- beginner
+categories: 
+  - news
+tags: 
+  - end
+  - beginner
+published: true
 ---
 
-### Header 3
-
-> This is a blockquote.
-> 
-> This is the second paragraph in the blockquote.
->
-> ## This is an H2 in a blockquote
+### Basics of html4
